@@ -52,7 +52,7 @@
         <section class="title-section">
             <div class="section">
              <h1 class="main-title">EFFECTIVE SOLUTIONS FOR <br/> YOUR BUSINESS</h1>
-             <button class="blue-button" type="button">Request our service</button>
+             <button data-modal-open class="blue-button" type="button">Request our service</button>
             </div>
         </section>
         
@@ -339,5 +339,17 @@
         </div>
     </footer>
 </div>
+
+<div data-modal class="is-hidden">
+    <div data-modal-content>
+        <h2>Asta e un titlu din modal</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, fuga?
+        </p>
+        <button data-modal-close type="button">X</button>
+    </div>
+</div>
+
+<script src="./modal.js"></script>
 </body>
 </html>

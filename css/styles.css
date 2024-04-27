@@ -131,6 +131,12 @@ z-index: 10;
     stroke: var(--blue);
     cursor: pointer;
 }
+
+li .link:visited {
+    stroke: var(--blue);
+    cursor: pointer;
+}
+
 .envelope,
 .smartphone {
     margin-right: 10px;
@@ -154,9 +160,13 @@ z-index: 10;
 }
 
 .navigation-list .list-element:hover::after,
-.navigation-list .list-element:active::after {
-    width: 100%;
-}
+.navigation-list .list-element:active::after,
+.navigation-list .list-element:visited::after
+
+{width: 100%;}
+
+
+
 /* Link style */
 a {
     text-decoration: none;
@@ -684,19 +694,20 @@ border-color: #EEEEEE;
     margin-top: 0px;   
 }
 
-.relative-overlay1 {
+.relative-overlay1, .relative-overlay2, .relative-overlay3, .relative-overlay4, .relative-overlay5, .relative-overlay6, .relative-overlay7, .relative-overlay8, .relative-overlay9 {
     position: relative;
     overflow: hidden;
+    
 }
 
-.portofolio-overlay1 {
+.portofolio-overlay1, .portofolio-overlay2, .portofolio-overlay3, .portofolio-overlay4, .portofolio-overlay5, .portofolio-overlay6, .portofolio-overlay7, .portofolio-overlay8, .portofolio-overlay9 {
     position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         transform: translateY(105%);
-        background-color: rgba(49, 39, 245, 0.7);
+        background-color: #2196F399;
         color: var(--white);
         transition-duration: 500ms;
         display: flex;
@@ -713,12 +724,77 @@ border-color: #EEEEEE;
         padding-right: 24px;
         padding-top: 63px;
         padding-bottom: 91px;
+        
 }
 
 .portofolio-overlay1 p {
-    
+    width: 300px;
 }
 
-.relative-overlay1:hover .portofolio-overlay1 {
+.portofolio-content:hover .portofolio-overlay1 {
     transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay2 { transform: translateY(0);}
+
+.portofolio-content:hover .portofolio-overlay3 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay4 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay5 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay6 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay7 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay8 {
+    transform: translateY(0);
+}
+.portofolio-content:hover .portofolio-overlay9 {
+    transform: translateY(0);
+}
+
+/* Style pentru modal */
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 11;
+}
+
+[data-modal] {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+}
+
+.is-hidden [data-modal-content] { 
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+[data-modal-content] {
+    width: 528px;
+    height: 581px;
+    background-color: var(--white);
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition-duration: 1s;
+    padding: 20px;
+}
+
+[data-modal-close] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
