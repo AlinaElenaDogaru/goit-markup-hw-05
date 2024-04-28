@@ -694,13 +694,13 @@ border-color: #EEEEEE;
     margin-top: 0px;   
 }
 
-.relative-overlay1, .relative-overlay2, .relative-overlay3, .relative-overlay4, .relative-overlay5, .relative-overlay6, .relative-overlay7, .relative-overlay8, .relative-overlay9 {
+.relative-overlay {
     position: relative;
     overflow: hidden;
     
 }
 
-.portofolio-overlay1, .portofolio-overlay2, .portofolio-overlay3, .portofolio-overlay4, .portofolio-overlay5, .portofolio-overlay6, .portofolio-overlay7, .portofolio-overlay8, .portofolio-overlay9 {
+.portofolio-overlay {
     position: absolute;
         top: 0;
         left: 0;
@@ -727,38 +727,17 @@ border-color: #EEEEEE;
         
 }
 
-.portofolio-overlay1 p {
+.portofolio-overlay p {
     width: 300px;
 }
 
-.portofolio-content:hover .portofolio-overlay1 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay2 { transform: translateY(0);}
-
-.portofolio-content:hover .portofolio-overlay3 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay4 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay5 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay6 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay7 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay8 {
-    transform: translateY(0);
-}
-.portofolio-content:hover .portofolio-overlay9 {
+.portofolio-content:hover .portofolio-overlay {
     transform: translateY(0);
 }
 
-/* Style pentru modal */
+
+
+/* Modal style */
 .is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -791,10 +770,30 @@ border-color: #EEEEEE;
     transform: translate(-50%, -50%) scale(1);
     transition-duration: 1s;
     padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+ 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 [data-modal-close] {
     position: absolute;
     top: 10px;
     right: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 18px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-modal-close]:hover,
+[data-modal-close]:focus {
+    color: var(--blue);
 }
