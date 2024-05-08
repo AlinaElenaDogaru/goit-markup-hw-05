@@ -165,7 +165,7 @@ li .link:visited {
 }
 
 .navigation-list .list-element:hover::after,
-.navigation-list .list-element:active::after,
+.navigation-list .active::after,
 .navigation-list .list-element:visited::after {
     width: 100%;
 }
